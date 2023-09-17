@@ -24,8 +24,8 @@ public class BaseDriver {
     public static WebDriverWait wait;
 
     @BeforeClass
-    public void baslangicIslemleri(){
-        Logger logger= Logger.getLogger(""); // output yapılan logları al.
+    public void baslangicIslemleri() {
+        Logger logger = Logger.getLogger(""); // output yapılan logları al.
         logger.setLevel(Level.SEVERE); // sadece ERROR ları göster
 
         driver = new ChromeDriver(); // jenkins deyken : sen head olmadan yani hafızada çalış
@@ -37,25 +37,34 @@ public class BaseDriver {
         login(); //her testin baslangicinda login yapilmadigi icin simdilik yoruma alindi
 
     }
-    public void logout(){
-     //   WebElement logouta = driver.findElement(By.xpath("//a[@href='/openmrs/appui/header/logout.action?successUrl=openmrs']"));
-      //  logouta.click();
+
+    public void logout() {
+        //   WebElement logouta = driver.findElement(By.xpath("//a[@href='/openmrs/appui/header/logout.action?successUrl=openmrs']"));
+        //  logouta.click();
 
     }
-    public void login(){
+
+    public void login() {
         driver.get("https://demo.nopcommerce.com/");
         MyFunc.Bekle(1);
-      //  mrs_elements elemans=new mrs_elements();
-      //  elemans.demobuton.click();
-        MyFunc.Bekle(1);
+        WebElement loginLinkButton = driver.findElement(By.xpath("//a[text()='Log in']"));
+        loginLinkButton.click();
 
+        WebElement emailInput = driver.findElement(By.xpath("//*[@id='Email']"));
+        emailInput.sendKeys("");
+
+        WebElement passwordInput = driver.findElement(By.xpath("//*[@id='Password']"));
+        passwordInput.sendKeys("");
+
+        WebElement logInButton = driver.findElement(By.xpath("//button[@class='button-1 login-button']"));
+        logInButton.click();
 
 
 
     }
 
     @AfterClass
-    public void bitisIslemleri(){ // tearDown
+    public void bitisIslemleri() { // tearDown
 
         MyFunc.Bekle(2);
         //driver.quit();
