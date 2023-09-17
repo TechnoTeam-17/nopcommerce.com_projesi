@@ -1,13 +1,16 @@
-import Utility.BaseDriver;
+
 import Utility.MyFunc;
 import org.openqa.selenium.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class US_01_Reg_KullanıcıKaydı_Register_Oluşturma extends BaseDriver {
+public class US_01_Reg_KullanıcıKaydı_Register_Oluşturma{
+     public static WebDriver driver;
 
     @Test
     public void kukkaniciKayidi(){
+    driver = new ChromeDriver();
+        
 
        driver.get("https://demo.nopcommerce.com/");
 
@@ -66,7 +69,7 @@ public class US_01_Reg_KullanıcıKaydı_Register_Oluşturma extends BaseDriver 
 
 
         MyFunc.Bekle(4);
-        driver.quit();
+        driver.close();
 
 
 
