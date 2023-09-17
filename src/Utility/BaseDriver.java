@@ -34,7 +34,7 @@ public class BaseDriver {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));  // 20 sn mühlet: elementi bulma mühleti
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-        login(); //her testin baslangicinda login yapilmadigi icin simdilik yoruma alindi
+      login(); //her testin baslangicinda login yapilmadigi icin simdilik yoruma alindi
 
     }
 
@@ -51,10 +51,10 @@ public class BaseDriver {
         loginLinkButton.click();
 
         WebElement emailInput = driver.findElement(By.xpath("//*[@id='Email']"));
-        emailInput.sendKeys("");
+        emailInput.sendKeys("aliveli123@gmail.com");
 
         WebElement passwordInput = driver.findElement(By.xpath("//*[@id='Password']"));
-        passwordInput.sendKeys("");
+        passwordInput.sendKeys("techno123");
 
         WebElement logInButton = driver.findElement(By.xpath("//button[@class='button-1 login-button']"));
         logInButton.click();

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All Test Suite">
+
+    <test name="myTest1">
+
+    <classes>
+        <class name="US_01_Reg_KullanıcıKaydı_Register_Oluşturma"> </class>
+    </classes>
+</test>
+    <test name="myTest2">
+    <classes>
+        <class name="US_02_Login"> </class>
+    </classes>
+</test>
+
+
+</suite>
+
+
+
+
