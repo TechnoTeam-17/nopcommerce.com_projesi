@@ -36,7 +36,7 @@ public class US_04_Tab_Menu_Kontrolu extends BaseDriver {
         WebElement ComputersBtn = driver.findElement(By.linkText("Computers"));
         actions.moveToElement(ComputersBtn).perform();
         ComputersBtn.click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("Computers"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("computers"));
         driver.navigate().back();
 
         WebElement ElectronicsBtn = driver.findElement(By.linkText("Electronics"));
@@ -48,28 +48,28 @@ public class US_04_Tab_Menu_Kontrolu extends BaseDriver {
         WebElement ApparelBtn = driver.findElement(By.linkText("Apparel"));
         actions.moveToElement(ApparelBtn).perform();
         ApparelBtn.click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("Apparel"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("apparel"));
         driver.navigate().back();
 
         WebElement DigitalDownloadsBtn = driver.findElement(By.linkText("Digital Downloads"));
         actions.moveToElement(DigitalDownloadsBtn).perform();
         DigitalDownloadsBtn.click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("Digital Downloads"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("digital Downloads"));
 
         WebElement BooksBtn = driver.findElement(By.linkText("Books"));
         actions.moveToElement(BooksBtn).perform();
         BooksBtn.click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("Books"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("books"));
 
         WebElement JewelryBtn = driver.findElement(By.linkText("Jewelry"));
         actions.moveToElement(JewelryBtn).perform();
         JewelryBtn.click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("Jewelry"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("jewelry"));
 
         WebElement GiftCardsBtn = driver.findElement(By.linkText("Gift Cards"));
         actions.moveToElement(GiftCardsBtn).perform();
         GiftCardsBtn.click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("Gift Cards"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("gift Cards"));
 
 
     }
