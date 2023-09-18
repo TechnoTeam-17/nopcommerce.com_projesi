@@ -15,6 +15,13 @@
     </classes>
 </test>
 
+<test name="myTest3">
+    <parameter name="browserTipi" value="chrome"></parameter>
+<classes>
+    <class name="US_03_Negatif_Pozitif_Login_Kombinasyonlari"> </class>
+</classes>
+</test>
+
 
 </suite>
 
