@@ -1,6 +1,7 @@
 
 import Utility.MyFunc;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -8,7 +9,7 @@ public class US_01_Reg_KullanıcıKaydı_Register_Oluşturma{
      public static WebDriver driver;
 
     @Test
-    public void kukkaniciKayidi(){
+    public void kullaniciKayidi(){
     driver = new ChromeDriver();
         
 
@@ -50,7 +51,7 @@ public class US_01_Reg_KullanıcıKaydı_Register_Oluşturma{
         MyFunc.Bekle(1);
 
         WebElement email=driver.findElement(By.id("Email"));
-        email.sendKeys("technoadmin@gmail.com"+ Keys.ENTER);
+        email.sendKeys("technoadmin12@gmail.com"+ Keys.ENTER);
         MyFunc.Bekle(1);
 
         WebElement password= driver.findElement(By.id("Password"));
@@ -65,7 +66,7 @@ public class US_01_Reg_KullanıcıKaydı_Register_Oluşturma{
 
         WebElement completed = driver.findElement(By.xpath("//div[@class='result']"));
         String complet=completed.getText();
-        Assert.assertTrue(complet.contains("logged"));
+        Assert.assertTrue(complet.contains("Your"));
 
 
         MyFunc.Bekle(4);
