@@ -63,10 +63,10 @@ public class US_03_Negatif_Pozitif_Login_Kombinasyonlari extends BaseDriverParam
         loginLinkButton.click();
 
         WebElement emailInput = driver.findElement(By.xpath("//*[@id='Email']"));
-        emailInput.sendKeys("technoadmin12@gmail.com");
+        emailInput.sendKeys("team17techno@gmail.com");
 
         WebElement passwordInput = driver.findElement(By.xpath("//*[@id='Password']"));
-        passwordInput.sendKeys("techno123");
+        passwordInput.sendKeys("123456");
 
         WebElement logInButton = driver.findElement(By.xpath("//button[@class='button-1 login-button']"));
         logInButton.click();
