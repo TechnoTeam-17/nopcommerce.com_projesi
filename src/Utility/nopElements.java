@@ -13,52 +13,56 @@ public class nopElements {
     public nopElements() {
             PageFactory.initElements(BaseDriver.driver, this);
         }
-
-       // @FindBy(xpath="//a[@class='zak-button']")
+        // @FindBy(xpath="//a[@class='zak-button']")
        // public WebElement demobuton;
     @FindBy(xpath = "//a[@class='ico-register']")
-               public WebElement registrButton;
-
+    public WebElement registrButton;
     @FindBy(id ="gender-female" )
-            public WebElement gender;
+    public WebElement gender;
     @FindBy(id = "FirstName")
-            public WebElement   firsName;
-    @FindBy(xpath = "//input[@id='LastName']\"")
+    public WebElement   firsName;
+    @FindBy(xpath = "//input[@id='LastName']")
     public WebElement   lastName;
-
     @FindBy(name = "DateOfBirthDay")
-    public WebElement day  ;
-
+    public WebElement day;
     @FindBy(name = "DateOfBirthMonth")
     public WebElement month;
-
-    //JavascriptExecutor js=(JavascriptExecutor) driver;
-
-    //js.executeScript("window.scrollTo(0, document.body.scrollHeight);"); // sayfanının sonuna gider.
-    //MyFunc.Bekle(2);
-    //js.executeScript("window.scrollTo(0, 0);"); // sayfanın en üstüne git.
-
     @FindBy(name = "//select[@name='DateOfBirthYear']")
     public WebElement  year;
-
     @FindBy(id = "Email")
     public WebElement  email;
-
     @FindBy(id = "Password")
     public WebElement  password;
-
     @FindBy(id = "ConfirmPassword")
     public WebElement  confirmpassword;
-
     @FindBy(xpath = "//button[@id='register-button']")
     public WebElement kaydolButton;
-
     @FindBy(xpath = "//div[@class='result']")
     public WebElement completed;
 
+    //US_02_Login
+
+    //US_03_Negatif_Pozitif_Login_Kombinasyonlari
+
+    @FindBy(xpath = "//a[text()='Log in']")
+    public WebElement    loginLinkButton;
+    @FindBy(xpath ="//*[@id='Email']" )
+    public WebElement emailInput;
+    @FindBy(xpath = "//*[@id='Password']" )
+    public WebElement  passwordInput;
+    @FindBy(xpath ="//button[@class='button-1 login-button']")
+    public WebElement  logInButton;
+    @FindBy (xpath = "//div[@class='message-error validation-summary-errors']" )
+    public WebElement unsuccessfulElement;
+
+    //US_04_Tab_Menu_Kontrolu
+    //US_04_TabMenu02
+    //US_05_Hediye_Sipariş_Verme_İşlemi
+    //US_06_Bilgisayar_Siparişi_Verme_İşlemi
 
 
-   // WebElement completed = driver.findElement(By.xpath(""));
+
+
 
 
     }
