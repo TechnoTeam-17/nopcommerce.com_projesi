@@ -63,16 +63,18 @@ public class US_03_Negatif_Pozitif_Login_Kombinasyonlari extends BaseDriverParam
         loginLinkButton.click();
 
         WebElement emailInput = driver.findElement(By.xpath("//*[@id='Email']"));
-        emailInput.sendKeys("team17techno@gmail.com");
+        emailInput.sendKeys("team17@gmail.com");
 
         WebElement passwordInput = driver.findElement(By.xpath("//*[@id='Password']"));
-        passwordInput.sendKeys("123456");
+        passwordInput.sendKeys("techno123");
 
         WebElement logInButton = driver.findElement(By.xpath("//button[@class='button-1 login-button']"));
         logInButton.click();
 
         WebElement logout=driver.findElement(By.linkText("Log out"));
         Assert.assertTrue(logout.isDisplayed(),"Basarisiz giris denemesi.");
+
+        driver.quit();
 
     }
 

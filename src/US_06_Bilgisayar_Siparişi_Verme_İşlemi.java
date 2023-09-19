@@ -54,5 +54,10 @@ public class US_06_Bilgisayar_Siparişi_Verme_İşlemi extends BaseDriver {
 
         System.out.println(" " +verificationMessage.getText());
 
+
+        driver.quit();
+
+
+
     }
 }

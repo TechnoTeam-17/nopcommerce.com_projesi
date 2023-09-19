@@ -13,7 +13,7 @@ public class nopElements {
     public nopElements() {
           PageFactory.initElements(BaseDriver.driver, this);
         }
-
+   @FindBy(xpath = "//a[@class='ico-register']")
     public WebElement registrButton;
     @FindBy(id ="gender-female" )
     public WebElement gender;

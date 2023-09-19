@@ -1,3 +1,4 @@
+import Utility.BaseDriver;
 import org.testng.annotations.Test;
 
 import org.openqa.selenium.By;
@@ -9,15 +10,15 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class US_05_Hediye_Sipariş_Verme_İşlemi {
-    public static WebDriver driver;
+public class US_05_Hediye_Sipariş_Verme_İşlemi  extends BaseDriver {
+   // public static WebDriver driver;
 
     @BeforeClass
     public void setUp() {
 
-        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+       // System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+      //  driver = new ChromeDriver();
+       // driver.manage().window().maximize();
     }
 
     @Test
