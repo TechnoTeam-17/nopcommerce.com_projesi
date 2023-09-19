@@ -1,25 +1,26 @@
 
 import Utility.MyFunc;
+import Utility.nopElements;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import sun.text.normalizer.Utility;
 
 public class US_01_Reg_KullanıcıKaydı_Register_Oluşturma{
      public static WebDriver driver;
+   nopElements elements=new nopElements();
 
     @Test
     public void kullaniciKayidi(){
     driver = new ChromeDriver();
-        
 
-       driver.get("https://demo.nopcommerce.com/");
+    driver.get("https://demo.nopcommerce.com/");
+      WebElement registrButton=driver.findElement(By.xpath("//a[@class='ico-register']"));
+      registrButton.click();
+      MyFunc.Bekle(1);
 
-       WebElement registrButton=driver.findElement(By.xpath("//a[@class='ico-register']"));
-       registrButton.click();
-        MyFunc.Bekle(1);
-
-        WebElement gender=driver.findElement(By.id("gender-female"));
+      WebElement gender=driver.findElement(By.id("gender-female"));
         gender.click();
 
         WebElement firsName=driver.findElement(By.id("FirstName"));
@@ -51,7 +52,7 @@ public class US_01_Reg_KullanıcıKaydı_Register_Oluşturma{
         MyFunc.Bekle(1);
 
         WebElement email=driver.findElement(By.id("Email"));
-        email.sendKeys("technoadmin12@gmail.com"+ Keys.ENTER);
+        email.sendKeys("technoadmin123@gmail.com"+ Keys.ENTER);
         MyFunc.Bekle(1);
 
         WebElement password= driver.findElement(By.id("Password"));
