@@ -51,7 +51,7 @@ public class BaseDriver {
         loginLinkButton.click();
 
         WebElement emailInput = driver.findElement(By.xpath("//*[@id='Email']"));
-        emailInput.sendKeys("aliveli123@gmail.com");
+        emailInput.sendKeys("team17@gmail.com");
 
         WebElement passwordInput = driver.findElement(By.xpath("//*[@id='Password']"));
         passwordInput.sendKeys("techno123");
@@ -67,7 +67,7 @@ public class BaseDriver {
     public void bitisIslemleri() { // tearDown
 
         MyFunc.Bekle(2);
-        //driver.quit();
+        driver.quit();
     }
 
 }

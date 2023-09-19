@@ -22,6 +22,30 @@
 </classes>
 </test>
 
+    <test name="myTest4">
+        <parameter name="browserTipi" value="chrome"></parameter>
+        <classes>
+            <class name="US_04_Tab_Menu_Kontrolu"> </class>
+        </classes>
+    </test>
+    <test name="myTest5">
+        <parameter name="browserTipi" value="chrome"></parameter>
+        <classes>
+            <class name="US_05_Hediye_Sipariş_Verme_İşlemi"> </class>
+        </classes>
+    </test>
+    <test name="myTest6">
+        <parameter name="browserTipi" value="chrome"></parameter>
+        <classes>
+            <class name="US_06_Bilgisayar_Siparişi_Verme_İşlemi"> </class>
+        </classes>
+    </test>
+    <test name="myTest7">
+        <parameter name="browserTipi" value="chrome"></parameter>
+        <classes>
+            <class name="US_07_SearchByParameter_ParametreliArama"> </class>
+        </classes>
+    </test>
 
 </suite>
 
