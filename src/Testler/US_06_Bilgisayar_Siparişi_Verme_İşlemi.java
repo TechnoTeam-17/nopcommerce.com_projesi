@@ -55,6 +55,7 @@ public class US_06_Bilgisayar_Siparişi_Verme_İşlemi extends BaseDriver {
         Assert.assertEquals(verificationMessage.getText(), "The product has been added to your shopping cart");
 
         System.out.println(" " +verificationMessage.getText());
+        //
 
 
         driver.quit();

@@ -64,6 +64,7 @@ public class US_05_Hediye_Sipariş_Verme_İşlemi  extends BaseDriver {
         Assert.assertEquals(verificationMessage.getText(), "The product has been added to your shopping cart");
 
         //
+        //
     }
 
 }
@@ -98,6 +99,7 @@ public class US_05_Hediye_Sipariş_Verme_İşlemi  extends BaseDriver {
 
 
         //addToCartButton.click();
+
 
 
       //  WebElement successMessage = driver.findElement(By.id("successMessage"));

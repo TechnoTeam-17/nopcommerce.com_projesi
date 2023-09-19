@@ -82,6 +82,7 @@ public class US_04_Tab_Menu_Kontrolu {
 
             // Yeniden menü öğelerini bul
             gercekMenuOgeleri = driver.findElements(By.xpath("//ul[@class='top-menu notmobile']/li"));
+            //
         }
     }
 

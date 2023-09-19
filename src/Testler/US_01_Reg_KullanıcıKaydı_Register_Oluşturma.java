@@ -39,7 +39,7 @@ public class US_01_Reg_KullanıcıKaydı_Register_Oluşturma {
     // elements.completed.getText();
 
    // wait.until(ExpectedConditions.urlContains("success"));
-
+//
 
 
 

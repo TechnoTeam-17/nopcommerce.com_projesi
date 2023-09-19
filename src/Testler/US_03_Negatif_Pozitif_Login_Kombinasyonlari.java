@@ -41,6 +41,7 @@ public class US_03_Negatif_Pozitif_Login_Kombinasyonlari extends BaseDriverParam
        softAssert.assertAll();
 
         MyFunc.Bekle(1);
+        //
 
     }
     @DataProvider
