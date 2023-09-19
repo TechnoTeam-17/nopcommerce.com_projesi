@@ -1,5 +1,4 @@
 package Utility;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -10,12 +9,11 @@ import org.testng.Assert;
 import java.util.List;
 
 public class nopElements {
+    public String msg;
     public nopElements() {
-            PageFactory.initElements(BaseDriver.driver, this);
+          PageFactory.initElements(BaseDriver.driver, this);
         }
-        // @FindBy(xpath="//a[@class='zak-button']")
-       // public WebElement demobuton;
-    @FindBy(xpath = "//a[@class='ico-register']")
+
     public WebElement registrButton;
     @FindBy(id ="gender-female" )
     public WebElement gender;
