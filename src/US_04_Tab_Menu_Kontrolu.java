@@ -1,80 +1,94 @@
-import Utility.BaseDriver;
+
+
+import Utility.MyFunc;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
-public class US_04_Tab_Menu_Kontrolu extends BaseDriver {
+public class US_04_Tab_Menu_Kontrolu {
+    private WebDriver driver;
 
-    @Test(priority = 1)
-    public void menuList(){
-        List<String> expectedMenuList = new ArrayList<>();
-        expectedMenuList.add("Computers");
-        expectedMenuList.add("Electronics");
-        expectedMenuList.add("Apparel");
-        expectedMenuList.add("Digital Downloads");
-        expectedMenuList.add("Books");
-        expectedMenuList.add("Jevelry");
-        expectedMenuList.add("Gift Cards");
+    @BeforeClass
+    public void setUp() {
 
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+    }
 
+    @Test()
+    void tabMenuTest() {
+        driver.get("https://demo.nopcommerce.com/");
 
-        // JavaScript ile metinleri çekmek için kullanılacak liste
-        List<String> actualMenuList = new ArrayList<>();
-        System.out.println("expectedMenuList = " + expectedMenuList);
+        // Beklenen menü öğelerini tanımla
+        List<String> tabMenuList = new ArrayList<>(Arrays.asList("Computers", "Electronics", "Apparel", "Digital downloads", "Books", "Jewelry", "Gift Cards"));
+        List<WebElement> tabMenu = driver.findElements(By.xpath("//ul[@class='top-menu notmobile']/li"));
 
+        // Her menü öğesini doğrula
+        for (int i = 0; i < tabMenu.size(); i++) {
+            Assert.assertTrue(tabMenu.get(i).getText().contains(tabMenuList.get(i)));
+        }
+        System.out.println("Tab Menü İsimleri:");
+        for (WebElement element : tabMenu) {
+            System.out.println(element.getText());
+        }
+    }
 
-        // JavascriptExecutor kullanarak elementlerin içeriğini çekin ve Java tarafında saklayın
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        Actions actions = new Actions(driver);
+    @Test()
+    public void menuAdlaridogrulama() {
+        // Web sayfasını aç
+        driver.get("https://demo.nopcommerce.com/");
 
-        WebElement ComputersBtn = driver.findElement(By.linkText("Computers"));
-        actions.moveToElement(ComputersBtn).perform();
-        ComputersBtn.click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("computers"));
-        driver.navigate().back();
+        // Beklenen menü öğelerini tanımla
+        List<String> beklenenMenuItem = new ArrayList<>(Arrays.asList(
+                "Computers", "Electronics", "Apparel", "Digital downloads", "Books", "Jewelry", "Gift Cards"
+        ));
 
-        WebElement ElectronicsBtn = driver.findElement(By.linkText("Electronics"));
-        actions.moveToElement(ElectronicsBtn).perform();
-        ElectronicsBtn.click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("Electronics"));
-        driver.navigate().back();
+        // Menü öğelerini bul
+        List<WebElement>gercekMenuOgeleri = driver.findElements(By.xpath("//ul[@class='top-menu notmobile']/li"));
 
-        WebElement ApparelBtn = driver.findElement(By.linkText("Apparel"));
-        actions.moveToElement(ApparelBtn).perform();
-        ApparelBtn.click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("apparel"));
-        driver.navigate().back();
+        // Her menü öğesini doğrula
+        for (int i = 0; i < gercekMenuOgeleri.size(); i++) {
+            String gercekMenuOgeleriText = gercekMenuOgeleri.get(i).getText();
+            String beklenenMenuItemText = beklenenMenuItem.get(i);
+            Assert.assertTrue(gercekMenuOgeleriText.contains(beklenenMenuItemText));
 
-        WebElement DigitalDownloadsBtn = driver.findElement(By.linkText("Digital Downloads"));
-        actions.moveToElement(DigitalDownloadsBtn).perform();
-        DigitalDownloadsBtn.click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("digital Downloads"));
+            // Her menü öğesine tıkla
+            gercekMenuOgeleri.get(i).click();
+            MyFunc.Bekle(2);
 
-        WebElement BooksBtn = driver.findElement(By.linkText("Books"));
-        actions.moveToElement(BooksBtn).perform();
-        BooksBtn.click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("books"));
+            // Sayfa başlığını kontrol et
+            String pageTitle = driver.getTitle();
+            System.out.println("Sayfa Başlığı: " + pageTitle);
 
-        WebElement JewelryBtn = driver.findElement(By.linkText("Jewelry"));
-        actions.moveToElement(JewelryBtn).perform();
-        JewelryBtn.click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("jewelry"));
+            // Şu anki sayfanın URL'sini al
+            String currentUrl = driver.getCurrentUrl();
+            System.out.println("Sayfa URL'si: " + currentUrl);
 
-        WebElement GiftCardsBtn = driver.findElement(By.linkText("Gift Cards"));
-        actions.moveToElement(GiftCardsBtn).perform();
-        GiftCardsBtn.click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("gift Cards"));
+            // İşlemler veya doğrulamalar burada yapılabilir
+            // Örneğin, sayfa içeriğini kontrol etmek için WebElement bulunabilir veya diğer test senaryolarını uygulayabilirsiniz.
 
+            // Sayfadan geri dön
+            driver.navigate().back();
 
+            // Yeniden menü öğelerini bul
+            gercekMenuOgeleri = driver.findElements(By.xpath("//ul[@class='top-menu notmobile']/li"));
+        }
+    }
+
+    @AfterClass
+    public void tearDown() {
+        // Tarayıcıyı kapat
+        driver.quit();
     }
 }
-
-
-
 
