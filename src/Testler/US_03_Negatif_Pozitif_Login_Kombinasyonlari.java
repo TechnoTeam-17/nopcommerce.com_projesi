@@ -1,3 +1,5 @@
+package Testler;
+
 import Utility.BaseDriverParametr;
 import Utility.MyFunc;
 import org.openqa.selenium.By;
@@ -39,6 +41,7 @@ public class US_03_Negatif_Pozitif_Login_Kombinasyonlari extends BaseDriverParam
        softAssert.assertAll();
 
         MyFunc.Bekle(1);
+        //
 
     }
     @DataProvider
