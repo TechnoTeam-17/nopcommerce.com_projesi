@@ -6,44 +6,44 @@
     <test name="myTest1">
 
     <classes>
-        <class name="US_01_Reg_KullanıcıKaydı_Register_Oluşturma"> </class>
+        <class name="Testler.US_01_Reg_KullanıcıKaydı_Register_Oluşturma"> </class>
     </classes>
 </test>
     <test name="myTest2">
     <classes>
-        <class name="US_02_Login"> </class>
+        <class name="Testler.US_02_Login"> </class>
     </classes>
 </test>
 
 <test name="myTest3">
     <parameter name="browserTipi" value="chrome"></parameter>
 <classes>
-    <class name="US_03_Negatif_Pozitif_Login_Kombinasyonlari"> </class>
+    <class name="Testler.US_03_Negatif_Pozitif_Login_Kombinasyonlari"> </class>
 </classes>
 </test>
 
     <test name="myTest4">
         <parameter name="browserTipi" value="chrome"></parameter>
         <classes>
-            <class name="US_04_Tab_Menu_Kontrolu"> </class>
+            <class name="Testler.US_04_Tab_Menu_Kontrolu"> </class>
         </classes>
     </test>
     <test name="myTest5">
         <parameter name="browserTipi" value="chrome"></parameter>
         <classes>
-            <class name="US_05_Hediye_Sipariş_Verme_İşlemi"> </class>
+            <class name="Testler.US_05_Hediye_Sipariş_Verme_İşlemi"> </class>
         </classes>
     </test>
     <test name="myTest6">
         <parameter name="browserTipi" value="chrome"></parameter>
         <classes>
-            <class name="US_06_Bilgisayar_Siparişi_Verme_İşlemi"> </class>
+            <class name="Testler.US_06_Bilgisayar_Siparişi_Verme_İşlemi"> </class>
         </classes>
     </test>
     <test name="myTest7">
         <parameter name="browserTipi" value="chrome"></parameter>
         <classes>
-            <class name="US_07_SearchByParameter_ParametreliArama"> </class>
+            <class name="Testler.US_07_SearchByParameter_ParametreliArama"> </class>
         </classes>
     </test>
 
