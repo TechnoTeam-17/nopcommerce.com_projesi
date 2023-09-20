@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="mySuit">
+
+    <test name="myTest1">
+        <parameter name="searchText" value="Adobe Photoshop CS4"></parameter>
+
+        <classes>
+            <class name="Testler.US_07_SearchByParameter_ParametreliArama"> </class>
+        </classes>
+    </test>
+
+
+</suite>
