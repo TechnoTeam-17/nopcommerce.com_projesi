@@ -1,0 +1,37 @@
+US_01_Kullanıcı Kaydı (Register) Oluşturma
+Bir kullanıcı olarak, https://demo.nopcommerce.com/ adresine giderek web sitesine kaydolmak istiyorum.
+Böylece siteye erişim sağladığımda kişiselleştirilmiş içerikleri görebilir,
+özel tekliflerden ve diğer avantajlardan faydalanabilirim.
+
+US_02_Login Kullanıcı Girişi Yapabilme (Login)
+Bir kullanıcı olarak, web sitesine veri sağlayıcı (data provider) yöntemi kullanarak giriş yapabilmek istiyorum.
+Bu sayede, geçerli ve geçersiz e-posta ve şifre kombinasyonlarını test edebilir,
+başarısız giriş denemelerindeki uyarıları kontrol edebilir ve sonunda geçerli kombinasyon
+ile başarılı bir şekilde giriş yapabilirim.
+
+US_04_TabMenu01 Tab Menü Kontrolü
+Kullanıcı olarak, platformun tab menüsünün doğru bir şekilde çalıştığını ve alt menülerin
+doğrulanabilir olduğunu görmek istiyorum.
+Bu sayede platformdaki gezinmenin sorunsuz olduğundan emin olabilirim.
+
+US_04_TabMenu02 Tab Menü'deki ürünlerin kontrolü
+Kullanıcı olarak, platformun tab menüsündeki tüm ürünleri bir liste olarak toplamak istiyorum.
+Ardından, platformun arama özelliğini kullanarak bir ürün araması yapmak ve bu arama sonucunda
+bulunan ürünler arasından rastgele bir ürüne tıklayarak bu ürünün oluşturduğum listede bulunup
+bulunmadığını doğrulamak istiyorum. Böylece platformu daha etkili bir şekilde kullanarak zaman
+kazanabilirim, doğrulama kolaylığı sayesinde, daha iyi bir deneyim yaşamış olurum
+
+US_05_Gift01  Hediye Siparişi Verme İşlemi
+Müşteri olarak, web sitesinde hediye siparişi verme işlemini gerçekleştirmek istiyorum.
+Böylece, sevdiklerime hediye gönderebilir ve
+siparişin başarılı bir şekilde tamamlandığından emin olabilirim.
+
+US_06_Order01 Bilgisayar Siparişi Verme İşlemi
+Bir kullanıcı olarak, web sitesinden özelleştirilebilir bir bilgisayar siparişi
+verme işlemi yapmak istiyorum. Bu sayede, ihtiyaçlarımı en iyi şekilde karşılayan
+bir bilgisayar satın alabilirim ve siparişin başarılı bir şekilde tamamlandığından emin olabilirim.
+
+US-07_Search01 Parametreli Arama İşlemi
+Bir kullanıcı olarak, web sitesinde parametreli bir arama yaparak belirli bir ürünü bulmayı
+ve bu ürünün doğru bir şekilde listelendiğini doğrulamayı istiyorum.
+Bu sayede, aradığım ürünü hızlı ve kolay bir şekilde bulabilir, sonuçları kontrol edebilirim.
