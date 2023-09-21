@@ -1,14 +1,65 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="mySuit">
-
     <test name="myTest1">
+        <parameter name="searchText" value="Adobe Photoshop CS4"></parameter>
+
+        <classes>
+            <class name="Testler.US_01_Reg_KullanıcıKaydı_Register_Oluşturma"> </class>
+        </classes>
+    </test>
+    <test name="myTest2">
+        <parameter name="searchText" value="Adobe Photoshop CS4"></parameter>
+
+        <classes>
+            <class name="Testler.US_02_Login"> </class>
+        </classes>
+    </test>
+    <test name="myTest3">
+        <parameter name="searchText" value="Adobe Photoshop CS4"></parameter>
+
+        <classes>
+            <class name="Testler.US_03_Negatif_Pozitif_Login_Kombinasyonlari"> </class>
+        </classes>
+    </test>
+    <test name="myTest4">
+        <parameter name="searchText" value="Adobe Photoshop CS4"></parameter>
+
+        <classes>
+            <class name="Testler.US_04_Tab_Menu_Kontrolu"> </class>
+        </classes>
+    </test>
+    <test name="myTest4a">
+        <parameter name="searchText" value="Adobe Photoshop CS4"></parameter>
+
+        <classes>
+            <class name="Testler.US_04_TabMenu02"> </class>
+        </classes>
+    </test>
+    <test name="myTest5">
+        <parameter name="searchText" value="Adobe Photoshop CS4"></parameter>
+
+        <classes>
+            <class name="Testler.US_05_Hediye_Sipariş_Verme_İşlemi"> </class>
+        </classes>
+    </test>
+    <test name="myTest6">
+        <parameter name="searchText" value="Adobe Photoshop CS4"></parameter>
+
+        <classes>
+            <class name="Testler.US_06_Bilgisayar_Siparişi_Verme_İşlemi"> </class>
+        </classes>
+    </test>
+
+    <test name="myTest7">
         <parameter name="searchText" value="Adobe Photoshop CS4"></parameter>
 
         <classes>
             <class name="Testler.US_07_SearchByParameter_ParametreliArama"> </class>
         </classes>
     </test>
+
+
 
 
 </suite>
