@@ -18,30 +18,8 @@ public class US_01_Reg_KullanıcıKaydı_Register_Oluşturma {
 
   @Test
   public void kullaniciKayidi() {
-
     driver = new ChromeDriver();
     driver.get("https://demo.nopcommerce.com/");
-    nopElements elements = new nopElements();
-    // wait.until(ExpectedConditions.elementToBeClickable(elements.registrButton));
-
-    // elements.registrButton.click();
-
-    // elements.gender.click();
-    // elements.firsName.sendKeys("Admin");
-    // elements.lastName.sendKeys("Techno");
-    // elements.day.sendKeys("1");
-    // elements.month.sendKeys("January");
-    // elements.year.sendKeys("2000");
-    // elements.email.sendKeys("technoadmin123@gmail.com" + Keys.ENTER);
-    // elements.password.sendKeys("techno123");
-    // elements.confirmpassword.sendKeys("techno123");
-    // elements.kaydolButton.click();
-    // elements.completed.getText();
-
-   // wait.until(ExpectedConditions.urlContains("success"));
-//
-
-
 
     WebElement registrButton = driver.findElement(By.xpath("//a[@class='ico-register']"));
     registrButton.click();
@@ -73,7 +51,7 @@ public class US_01_Reg_KullanıcıKaydı_Register_Oluşturma {
    MyFunc.Bekle(1);
 
    WebElement email=driver.findElement(By.id("Email"));
-   email.sendKeys("team57@gmail.com"+ Keys.ENTER);
+   email.sendKeys("team88@gmail.com"+ Keys.ENTER);
    MyFunc.Bekle(1);
 
    WebElement password= driver.findElement(By.id("Password"));

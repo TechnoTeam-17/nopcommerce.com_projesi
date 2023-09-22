@@ -16,27 +16,17 @@ public class US_07_SearchByParameter_ParametreliArama extends BaseDriver {
     @Parameters("searchText")
     public void searchTest(String aranacakKelime) {
 
-        nopElements nop=new nopElements();
-
+        nopElements nop = new nopElements();
 
         nop.searchBox.sendKeys(aranacakKelime);
-
         nop.searchButton.click();
 
-        List<WebElement> productNameList=nop.searchList;
+        List<WebElement> productNameList = nop.searchList;
 
-
-        for (WebElement e:productNameList  ) {
+        for (WebElement e : productNameList) {
             Assert.assertTrue(e.getText().toLowerCase().contains(aranacakKelime.toLowerCase()), "Eşleşme Sağlanamadı");
-
         }
-
-
-        //h2[@class='product-title']/a
-
-
-
-        //Adobe Photoshop CS4
+        driver.quit();
 
 
     }
