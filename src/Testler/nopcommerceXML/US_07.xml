@@ -28,7 +28,7 @@
     <test name="myTest4a">
         <parameter name="searchText" value="TabMenu02"></parameter>
         <classes>
-            <class name="Testler.US_04_TabMenu02"> </class>
+            <class name="Testler.US_04_Tab_Menüdeki_ürünlerin_kontrolü"> </class>
         </classes>
     </test>
     <test name="myTest5">

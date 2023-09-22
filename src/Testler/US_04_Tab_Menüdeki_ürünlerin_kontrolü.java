@@ -1,19 +1,16 @@
 package Testler;
 
-import Utility.BaseDriver;
 import Utility.MyFunc;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class US_04_TabMenu02 {
+public class US_04_Tab_Menüdeki_ürünlerin_kontrolü {
     private WebDriver driver;
 
     @Test
