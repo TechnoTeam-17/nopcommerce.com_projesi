@@ -73,7 +73,7 @@ public class US_01_Reg_KullanıcıKaydı_Register_Oluşturma {
    MyFunc.Bekle(1);
 
    WebElement email=driver.findElement(By.id("Email"));
-   email.sendKeys("team17@gmail.com"+ Keys.ENTER);
+   email.sendKeys("team57@gmail.com"+ Keys.ENTER);
    MyFunc.Bekle(1);
 
    WebElement password= driver.findElement(By.id("Password"));
